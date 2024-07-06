@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthComponent } from './features/auth/auth.component';
-import { SeriesViewComponent } from './features/show-list/series-view/series-view.component';
+import { AuthComponent } from './features/auth/components/auth.component';
+
+
 
 const routes: Routes = [
   {

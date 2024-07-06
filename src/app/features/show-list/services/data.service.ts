@@ -1,3 +1,4 @@
+import { environment } from './../../../../environments/environments';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -44,8 +45,15 @@ export class DataService {
 
   getComicsById( id: number ): Observable<IComics[]> {
     const params = this.getParams();
-    return this.http.get<DataApi<IComics>>(`${this.apiUrl}/comics`, { params }).pipe(
+    return this.http.get<DataApi<IComics>>(`${this.apiUrl}/comics/${id}`, { params }).pipe(
       map((data) => data.data.results)
     );
   }
+
+  // getComicId(id:number): Observable<IComics[]> {
+  //   const urlApi = `${this.apiUrl}/comics/${id}`;
+  //   return this.http.get<DataApi<IComics>>(urlApi).pipe(
+  //     map((data) => data.data.results)
+  //   )
+  // }
 }

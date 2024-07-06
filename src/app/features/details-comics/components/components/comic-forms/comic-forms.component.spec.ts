@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailsComicsComponent } from './details-comics.component';
+import { ComicFormsComponent } from './comic-forms.component';
 
-describe('DetailsComicsComponent', () => {
-  let component: DetailsComicsComponent;
-  let fixture: ComponentFixture<DetailsComicsComponent>;
+describe('ComicFormsComponent', () => {
+  let component: ComicFormsComponent;
+  let fixture: ComponentFixture<ComicFormsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DetailsComicsComponent]
+      declarations: [ComicFormsComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(DetailsComicsComponent);
+    fixture = TestBed.createComponent(ComicFormsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
