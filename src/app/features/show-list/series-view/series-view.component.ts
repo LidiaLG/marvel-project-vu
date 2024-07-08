@@ -9,13 +9,16 @@ import { ISeries } from '../../../core/interfaces/series.interface';
 })
 export class SeriesViewComponent implements OnInit{
   series: ISeries[] = [];
+  isLoading: boolean = true;
   private dataService = inject(DataService);
+
 
   ngOnInit(): void {
     this.dataService.getSeries().subscribe(
       (data) => {
         this.series = data;
         console.log(this.series);
+        this.isLoading = false;
       }
     )
   }

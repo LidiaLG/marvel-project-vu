@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthComponent } from './features/auth/components/auth.component';
+import { AuthViewComponent } from './features/auth/auth-view/auth-view.component';
 
 
 
 const routes: Routes = [
   {
-    path: '', component: AuthComponent
+    path: '', component: AuthViewComponent
   },
   {
     path: 'series', loadChildren: () => import('./features/show-list/modules/list.module')

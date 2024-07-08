@@ -1,0 +1,12 @@
+.card {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.card-body {
+  padding: 10px;
+}

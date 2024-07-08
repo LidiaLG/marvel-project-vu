@@ -1,8 +1,8 @@
-<p>comic-forms works!</p>
-<div *ngIf="comic">
-    <img *ngIf="getImage()" [src]="getImage()" alt="{{ comic.title }}" />
+
+<div *ngIf="comic" class="form-container">
+    <img class="img-form" *ngIf="getImage()" [src]="getImage()" alt="{{ comic.title }}" />
     <form [formGroup]="comicForm">
-        <div>
+        <div class="info-form-container">
             <label for="title">Title</label>
             <input type="text" id="title" formControlName="title" readonly>
         </div>

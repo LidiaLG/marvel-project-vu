@@ -1,0 +1,19 @@
+<div class="spinner-container">
+    <!-- Usamos el evento (load) cuando se carga la imagen -->
+        <img 
+            [src]="url"
+            [alt]="alt"
+            class="card-img"
+            (load)="onLoad()"
+            [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+        >
+    
+    <!-- Le decimos que cuando no aparezca la imagen aparezca el spinner -->
+        <img
+            *ngIf="!hasLoaded" 
+            src="assets/loader.svg" 
+            height="35"
+            width="35"
+            class="mt-3"
+        >
+    </div>

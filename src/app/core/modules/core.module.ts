@@ -19,6 +19,7 @@ import { DataService } from '../../features/show-list/services/data.service';
     CommonModule,
     HttpClientModule
   ],
+  exports: [HeaderComponent],
   providers: [
     LocalStorageService,
     DataService,

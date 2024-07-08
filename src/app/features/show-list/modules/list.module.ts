@@ -9,6 +9,7 @@ import { ListRoutingModule } from './list-routing.module';
 import { DetailsComicsComponent } from '../../details-comics/components/details-comics.component';
 import { ComicFormsComponent } from '../../details-comics/components/components/comic-forms/comic-forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../../../shared/module/shared/shared.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ListRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class ListModule { }

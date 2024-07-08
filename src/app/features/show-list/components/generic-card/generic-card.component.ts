@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class GenericCardComponent {
   @Input() dataApi: any[] = [];
   @Input() type: "series" | "comics" = "series";
-  
+  @Input() isLoading: boolean = false;
 }

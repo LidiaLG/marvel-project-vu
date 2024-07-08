@@ -1,13 +1,15 @@
 <div class="form-container">
     <form [formGroup]="authForm" (ngSubmit)="onSubmit()" class="form">
-        <div>
+        <div class="input-container">
             <label for="public_key">Public Key</label>
             <input id="public_key" formControlName="public_key">
         </div>
-        <div>
+        <div class="input-container">
             <label for="private_key">Private Key</label>
             <input id="private_key" formControlName="private_key">
         </div>
-        <button type="submit" [disabled]="authForm.invalid">Login</button>
+        <div class="btn-container">
+            <button type="submit" [disabled]="authForm.invalid">Login</button>
+        </div>
     </form>
 </div>
