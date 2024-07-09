@@ -1,18 +1,26 @@
 <!-- <div *ngFor="let data of dataApi">
     <a [routerLink]="[type === 'series' ? '/series/' + data.id + '/comic': data.id]">{{data.title}}</a>
 </div> -->
-<div *ngIf="isLoading" class="spinner-container">
+<div class="card-container">
+  <ng-container *ngIf="isLoading; else templateCard" class="spinner-container">
     <app-spinner url="assets/loader.svg" alt="Loading..."></app-spinner>
-  </div>
-  <div *ngIf="!isLoading">
-    <div *ngFor="let data of dataApi">
-      <div class="card">
+  </ng-container>
+  <ng-template #templateCard>
+    <div *ngFor="let data of dataApi"  class="card" >
+      <div>
         <app-spinner [url]="data.thumbnail.path + '.' + data.thumbnail.extension" [alt]="data.title"></app-spinner>
         <div class="card-body">
-          <a [routerLink]="[type === 'series' ? '/series/' + data.id + '/comic' : + data.id]">
+          <p>
             {{ data.title }}
-          </a>
+          </p>
+          <button 
+            [routerLink]="[type === 'series' ? '/series/' + data.id + '/comic' : + data.id]"
+            class="btn-more-info">
+            More info</button>
         </div>
       </div>
     </div>
-  </div>
+  </ng-template>
+</div>
+
+  

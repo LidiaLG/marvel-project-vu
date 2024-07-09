@@ -1,7 +1,11 @@
 .header {
     display: flex;
-    padding: 1rem;
+    padding: .5rem;
     background-color: #fff;
-    box-shadow: 2px 2px 4px rgba(56, 185, 153, 0.733) !important;
     width: 100%;
+    .logo {
+        width: 5em;
+        margin: auto;
+        background-color: #fff;
+    }
 }

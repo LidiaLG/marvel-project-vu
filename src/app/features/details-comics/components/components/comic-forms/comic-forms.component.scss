@@ -1,17 +1,28 @@
 .form-container {
-    margin-top: 2em;
+    width: 100%;
+    padding: 1em;
     display: flex;
-    justify-content: center;
     align-items: center;
     .img-form {
-        max-width: 200px; 
-        max-height: 200px; 
+        max-width: 400px; 
+        max-height: 400px; 
         object-fit: cover; 
     }
     form {
+        width: 100%;
         margin: 1em;
+        max-height: 400px;
+        
         input {
             width: 100%;
+            border: 0;
+        }
+        textarea[appHeightTextarea] {
+            width: 100%;
+            border: 0;
+            min-height: 100px;
+            overflow: hidden;
+            resize: none;
         }
     }
     .info-form-container {

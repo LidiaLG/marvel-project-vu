@@ -1,12 +1,34 @@
+@import 'styles';
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  text-align: center;
+  @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .card {
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-bottom: 20px;
+  @include flex-center;
+  .btn-more-info {
+    cursor: pointer;
+    margin-top: 1em;
+    border-radius: 2em;
+    padding: .5em;
+    box-shadow: 2px 2px 4px rgba(56, 185, 153, 0.733);
+    &:hover {
+      background-color: rgba(56, 185, 153, 0.733);
+    }
+  }
 }
   
 .card-body {
+  object-fit: fill;
   padding: 10px;
 }

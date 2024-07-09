@@ -13,7 +13,7 @@ import { IComics } from '../../../core/interfaces/comics.interface';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = 'https://gateway.marvel.com/v1/public';
+  apiUrl = environment.apiUrl;
   private localStorageService = inject(LocalStorageService);
 
   constructor(private http: HttpClient) {}
@@ -49,11 +49,4 @@ export class DataService {
       map((data) => data.data.results)
     );
   }
-
-  // getComicId(id:number): Observable<IComics[]> {
-  //   const urlApi = `${this.apiUrl}/comics/${id}`;
-  //   return this.http.get<DataApi<IComics>>(urlApi).pipe(
-  //     map((data) => data.data.results)
-  //   )
-  // }
 }
