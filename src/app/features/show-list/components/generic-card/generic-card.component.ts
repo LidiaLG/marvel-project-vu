@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './generic-card.component.scss'
 })
 export class GenericCardComponent {
+  public page!: number;
   @Input() dataApi: any[] = [];
   @Input() type: "series" | "comics" = "series";
   @Input() isLoading: boolean = false;

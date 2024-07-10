@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
   text-align: center;
   @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
@@ -31,4 +30,9 @@
 .card-body {
   object-fit: fill;
   padding: 10px;
+}
+
+.pagination-container {
+  width: 100%;
+  text-align: center;
 }

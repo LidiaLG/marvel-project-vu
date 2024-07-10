@@ -19,12 +19,11 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   private getParams(): HttpParams {
-    const ts = '1'; 
+   
     const publicKey = this.localStorageService.getPublicKey()!;
     const hash = this.localStorageService.getHash()!;
 
     return new HttpParams()
-      .set('ts', ts)
       .set('apikey', publicKey)
       .set('hash', hash);
   }

@@ -1,12 +1,9 @@
-<!-- <div *ngFor="let data of dataApi">
-    <a [routerLink]="[type === 'series' ? '/series/' + data.id + '/comic': data.id]">{{data.title}}</a>
-</div> -->
 <div class="card-container">
   <ng-container *ngIf="isLoading; else templateCard" class="spinner-container">
     <app-spinner url="assets/loader.svg" alt="Loading..."></app-spinner>
   </ng-container>
   <ng-template #templateCard>
-    <div *ngFor="let data of dataApi"  class="card" >
+    <div *ngFor="let data of dataApi | paginate: { itemsPerPage: 3, currentPage: page }"  class="card" >
       <div>
         <app-spinner [url]="data.thumbnail.path + '.' + data.thumbnail.extension" [alt]="data.title"></app-spinner>
         <div class="card-body">
@@ -21,6 +18,13 @@
       </div>
     </div>
   </ng-template>
+</div>
+<div class="pagination-container">
+  <pagination-controls 
+    (pageChange)="page = $event"
+    previousLabel="Previous"
+    nextLabel="Next"
+  ></pagination-controls>
 </div>
 
   

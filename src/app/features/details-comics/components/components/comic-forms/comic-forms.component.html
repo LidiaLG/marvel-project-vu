@@ -8,7 +8,7 @@
         </div>
         <div>
             <label for="description">Description</label>
-            <textarea appHeightTextarea type="text" id="description" formControlName="description" readonly>{{comic.description}}</textarea>
+            <textarea type="text" id="description" formControlName="description" readonly>{{comic.description}}</textarea>
         </div>
         <div>
             <label for="creators">Creators</label>
@@ -16,7 +16,7 @@
         </div>
         <div>
             <label for="date">Date</label>
-            <input type="text" id="date" formControlName="date" readonly>
+            <input type="text" id="date" [value]="comicForm.controls['date'].value | dateFormat" readonly>
         </div>
     </form>
 </div>
