@@ -1,4 +1,7 @@
-<h2 class="title-view">Series</h2>
+<div class="container-title">
+    <app-go-back-btn [text]="'back'" appGoBack></app-go-back-btn>
+    <h2 class="title-view">Series</h2>
+</div>
 <div class="serie-view-container">
     <app-generic-card [dataApi]="series" type="series" [isLoading]="isLoading"></app-generic-card>
 </div>
