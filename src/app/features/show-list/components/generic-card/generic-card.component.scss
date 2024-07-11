@@ -1,4 +1,5 @@
 @import 'styles';
+@import 'variables';
 
 .card-container {
   display: grid;
@@ -20,7 +21,7 @@
     margin-top: 1em;
     border-radius: 2em;
     padding: .5em;
-    box-shadow: 2px 2px 4px rgba(56, 185, 153, 0.733);
+    box-shadow: $shadow;
     &:hover {
       background-color: rgba(56, 185, 153, 0.733);
     }

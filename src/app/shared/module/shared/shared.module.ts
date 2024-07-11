@@ -4,6 +4,7 @@ import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { DateFormatPipe } from '../../pipes/date-format.pipe';
 import { GoBackBtnComponent } from '../../components/go-back-btn/go-back-btn.component';
 import { GoBackDirective } from '../../directives/go-back.directive';
+import { Error404Component } from '../../pages/error404/error404.component';
 
 
 
@@ -12,7 +13,8 @@ import { GoBackDirective } from '../../directives/go-back.directive';
     SpinnerComponent,
     DateFormatPipe,
     GoBackBtnComponent,
-    GoBackDirective
+    GoBackDirective,
+    Error404Component
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { GoBackDirective } from '../../directives/go-back.directive';
     SpinnerComponent,
     DateFormatPipe,
     GoBackBtnComponent,
-    GoBackDirective
+    GoBackDirective,
+    Error404Component
   ]
 })
 export class SharedModule { }
